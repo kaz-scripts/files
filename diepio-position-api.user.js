@@ -14,8 +14,6 @@
     let respawnInterval;
 
     function api() {
-        const shadowRoot = document.querySelector('d-base').shadowRoot;
-
         clearInterval(respawnInterval);
         let worldPosition = [0, 0];
 
