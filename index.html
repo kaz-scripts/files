@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ランダムタンク</title>
+</head>
+<body>
+    <h1 id="randomElement"></h1>
+    <button id="stopButton">ストップ</button>
+
+    <script>
+        const elements = [
+            "Tank", "Twin", "Sniper", "Machine Gun", "Flank Guard",
+            "Triple Shot", "Quad Tank", "Twin Flank", "Triple Twin", "Octo Tank",
+            "Triple Shot", "Penta Shot", "Assassin", "Overseer", "Twin-Flank",
+            "Hunter", "Quad Tank", "Destroyer", "Gunner", "Trapper",
+            "Mega Trapper", "Tri-Trapper", "Smasher", "Landmine", "Auto Gunner",
+            "Auto 5", "Auto 3", "Spread Shot", "Streamliner", "Auto Trapper",
+            "Dominator", "Arena Closer", "Mothership", "Predator", "Sprayer",
+            "Auto Smasher", "Annihilator", "Auto Gunner", "Booster", "Fighter",
+            "Hybrid", "Manager", "Stalker", "Ranger", "Overlord",
+            "Necromancer", "Overtrapper", "Factory", "Battleship", "Annihilator",
+            "Auto Smasher", "Landmine", "Spike", "Sprayer", "Predator",
+            "Tri-Angle", "Booster", "Fighter", "Hybrid", "Manager",
+            "Stalker", "Ranger", "Overlord", "Necromancer", "Overtrapper",
+            "Factory", "Battleship", "Penta Shot", "Spread Shot", "Octo Tank",
+            "Triple Shot", "Triplet", "Auto 3", "Assassin", "Arena Closer",
+            "Dominator", "Mothership", "Predator", "Streamliner", "Sprayer",
+            "Auto Smasher", "Landmine", "Spike"
+        ];
+
+        function showRandomElement() {
+            const randomIndex = Math.floor(Math.random() * elements.length);
+            const randomElement = elements[randomIndex];
+            document.getElementById("randomElement").textContent = randomElement;
+        }
+
+        document.getElementById("stopButton").addEventListener("click", function() {
+            clearInterval(interval);
+        });
+
+        const interval = setInterval(showRandomElement, 1);
+    </script>
+</body>
+</html>
