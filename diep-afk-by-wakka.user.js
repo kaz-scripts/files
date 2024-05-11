@@ -28,6 +28,7 @@ Object.defineProperty(Object, 'freeze', {
     configurable: false
 });
 
+delete Object.prototype.freeze;
 
 //GUIを開くキー。変更可能。
 let open_gui = 'y';
