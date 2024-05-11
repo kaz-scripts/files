@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         dont push me pls
 // @namespace    http://tampermonkey.net/
-// @version      2024-05-11
-// @description  you dont wanna push?
+// @version      2024-05-12
+// @description  you dont wanna to be pushed?
 // @author       wakka
 // @match        *://*.diep.io/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        unsafeWindow
 // @run-at       document-start
+// @updateURL    https://github.com/kaz-scripts/files/raw/main/diep-afk-by-wakka.user.js
+// @downloadURL  https://github.com/kaz-scripts/files/raw/main/diep-afk-by-wakka.user.js
 // ==/UserScript==
 
 const handler = {
