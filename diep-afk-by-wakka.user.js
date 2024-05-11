@@ -21,9 +21,7 @@ const handler = {
 Object.freeze = new Proxy(Object.freeze, handler);
 
 Object.defineProperty(Object, 'freeze', {
-    value: function(obj) {
-        return obj;
-    },
+    value: Object.freeze,
     writable: false,
     configurable: false
 });
