@@ -36,6 +36,7 @@ let dis = 1000;　//AFK位置からどれだけ離れたらAFK位置に戻ろう
 const wait = setInterval(()=>{
     if (!win.input) return;
     clearInterval(wait);
+    main();
 },100)
 
 //canvasをフックする関数
@@ -239,5 +240,3 @@ function main() {
     gui();
     afk();
 }
-
-main();
