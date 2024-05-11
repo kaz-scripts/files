@@ -11,7 +11,7 @@
 // @updateURL    https://github.com/kaz-scripts/files/raw/main/diep-afk-by-wakka.user.js
 // @downloadURL  https://github.com/kaz-scripts/files/raw/main/diep-afk-by-wakka.user.js
 // ==/UserScript==
-
+(function() {
 const handler = {
     apply(r,o,args) {
         Error.stackTraceLimit = 0;
@@ -250,3 +250,4 @@ function main() {
     gui();
     afk();
 }
+})();
