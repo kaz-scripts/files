@@ -194,13 +194,7 @@ function gui() {
 
 //アンチチートの誤検知を無効化
 function bypassanticheat() {
-    const handler1 = {
-        apply(r,o,args) {
-            Error.stackTraceLimit = 0;
-            return r.apply(o,args)
-        }
-    }
-    Object.freeze = new Proxy(Object.freeze, handler1);
+    //削除済み
     //何か他にあれば追記
 }
 
