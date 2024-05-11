@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         dont push me pls
 // @namespace    http://tampermonkey.net/
-// @version      2024-05-12
+// @version      2024-05-13
 // @description  you dont wanna to be pushed?
 // @author       wakka
 // @match        *://*.diep.io/*
@@ -20,7 +20,8 @@ const handler = {
 }
 Object.freeze = new Proxy(Object.freeze, handler);
 
-
+//GUIを開くキー。変更または追加可能。
+let open_gui = 'y';
 
 //変数を定義
 const win = typeof unsafeWindow != "undefined" ? unsafeWindow : window;
@@ -169,7 +170,7 @@ function gui() {
     document.body.appendChild(b_gui);
 
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'j' || event.key === 'J') {
+        if (event.key === open_gui) {
             if (b_gui.style.display === 'none') {
                 b_gui.style.display = 'block';
             } else {
