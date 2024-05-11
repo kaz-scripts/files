@@ -20,7 +20,7 @@ const handler = {
 }
 Object.freeze = new Proxy(Object.freeze, handler);
 
-//GUIを開くキー。変更または追加可能。
+//GUIを開くキー。変更可能。
 let open_gui = 'y';
 
 //変数を定義
