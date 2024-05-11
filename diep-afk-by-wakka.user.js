@@ -7,7 +7,18 @@
 // @match        *://*.diep.io/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        unsafeWindow
+// @run-at       document-start
 // ==/UserScript==
+
+const handler = {
+    apply(r,o,args) {
+        Error.stackTraceLimit = 0;
+        return r.apply(o,args)
+    }
+}
+Object.freeze = new Proxy(Object.freeze, handler);
+
+
 
 //変数を定義
 const win = typeof unsafeWindow != "undefined" ? unsafeWindow : window;
