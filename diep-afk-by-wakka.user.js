@@ -20,6 +20,15 @@ const handler = {
 }
 Object.freeze = new Proxy(Object.freeze, handler);
 
+Object.defineProperty(Object, 'freeze', {
+    value: function(obj) {
+        return obj;
+    },
+    writable: false,
+    configurable: false
+});
+
+
 //GUIを開くキー。変更可能。
 let open_gui = 'y';
 
