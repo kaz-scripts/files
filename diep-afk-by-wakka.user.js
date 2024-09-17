@@ -36,8 +36,8 @@ let afkPosition = [0, 0];
 let isactive = false;
 let b_gui, toggleButton, enableButton, pos;
 
-//AFK距離
-let dis = 1000;　//AFK位置からどれだけ離れたらAFK位置に戻ろうとするか。小さすぎると行ったり来たりしてしまう。
+//AFK閾値
+let dis = 1000;
 
 //diep.ioがロードされるまで待機
 const wait = setInterval(()=>{
@@ -66,7 +66,7 @@ function hook(target, callback){
     win.requestAnimationFrame(check);
 }
 
-//ミニマップの矢印をフック
+//フック
 function hookMinimapArrow () {
 
     let drawInstructions = 0;
@@ -103,7 +103,7 @@ function hookMinimapArrow () {
 let minimapPosition = [0, 0];
 let minimapDim = [0, 0];
 
-//ミニマップをフック
+//フック
 function hookMinimap () {
     hook ('strokeRect', (method, thisArg, args) => {
         const transform = thisArg.getTransform ();
@@ -202,10 +202,9 @@ function gui() {
     });
 }
 
-//アンチチートの誤検知を無効化
+//アンチチートのバイパス
 function bypassanticheat() {
-    //削除済み
-    //何か他にあれば追記
+    //removed lol
 }
 
 //AFK用関数
