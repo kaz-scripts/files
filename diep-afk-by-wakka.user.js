@@ -204,7 +204,7 @@ function gui() {
 
 //アンチチートのバイパス
 function bypassanticheat() {
-    //removed lol
+    //somthing
 }
 
 //AFK用関数
